@@ -1,5 +1,6 @@
 package com.shanto.teachersdashboard;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +11,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.shanto.teachersdashboard.Adapter.ClassListAdapter;
@@ -21,61 +23,18 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 
 public class MainActivity extends AppCompatActivity {
-
-    BottomAppBar bottomAppBar;
-    FloatingActionButton fab_main;
-    RecyclerView recyclerView;
-    TextView sample;
-
-    ClassListAdapter mAdapter;
-
-    Realm realm;
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Realm.init(this);
+        setContentView(R.layout.homepage);
 
-        getWindow().setEnterTransition(null);
-
-        bottomAppBar = findViewById(R.id.bottomAppBar);
-        fab_main = findViewById(R.id.fab_main);
-        fab_main.setOnClickListener(new View.OnClickListener() {
+        Button aten = findViewById(R.id.stList);
+        aten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Insert_class_Activity.class);
-                startActivity(intent);
+                Intent goTo = new Intent(MainActivity.this,Attendance.class);
+                startActivity(goTo);
             }
         });
-
-        realm = Realm.getDefaultInstance();
-
-        RealmResults<Class_Names> results;
-
-        results = realm.where(Class_Names.class)
-                .findAll();
-
-
-        sample = findViewById(R.id.classes_sample);
-        recyclerView = findViewById(R.id.recyclerView_main);
-
-        recyclerView.setHasFixedSize(true);
-        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
-
-        recyclerView.setLayoutManager(staggeredGridLayoutManager);
-
-        mAdapter = new ClassListAdapter( results,MainActivity.this);
-        recyclerView.setAdapter(mAdapter);
-
-
-    }
-
-    @Override
-    protected void onResume() {
-        realm.refresh();
-        realm.setAutoRefresh(true);
-        super.onResume();
     }
 }
