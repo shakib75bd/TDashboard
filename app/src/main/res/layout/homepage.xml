@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/White"
+    android:background="@drawable/wave"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -38,7 +38,7 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="20dp"
             android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textColor="@color/White"
             android:layout_marginTop="20dp"/>
 
         <Button
@@ -50,10 +50,20 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="20dp"
             android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textColor="@color/White"
             android:layout_marginTop="20dp"/>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="18dp"
+        android:gravity="bottom"
+        android:text="Shakib Hossen Shanto @2023" />
 
 
 </RelativeLayout>

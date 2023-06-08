@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/MainBack"
+    android:background="@drawable/wave"
     tools:context=".Attendance">
 
     <androidx.core.widget.NestedScrollView
@@ -23,7 +23,7 @@
             android:id="@+id/classes_sample"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="classes"
+            android:text="All classes"
             android:layout_marginLeft="16dp"
             android:textColor="@color/theme_light"
             android:layout_marginRight="16dp"/>
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         app:menu="@menu/only_dot"
         android:background="@color/white"
-        app:title="Easy Attendance"
+        app:title="Manage Attendance"
         />
 
     <com.google.android.material.bottomappbar.BottomAppBar
