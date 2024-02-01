@@ -36,5 +36,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goTo);
             }
         });
+
+        Button schedule = findViewById(R.id.class_schedule);
+        schedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goToNotifier = new Intent(MainActivity.this,Notification.class);
+                startActivity(goToNotifier);
+            }
+        });
+
+
+        Button abouts = findViewById(R.id.abouts);
+        abouts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goToAbout = new Intent(MainActivity.this,About.class);
+                startActivity(goToAbout);
+            }
+        });
     }
 }

@@ -5,22 +5,36 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Teacher's Dashboard"
+        android:label="Teacher&apos;s Dashboard"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.shanto.teachersdashboard.Reports_Detail_Activity"
-            android:theme="@style/AppTheme2" />
-        <activity android:name="com.shanto.teachersdashboard.Reports_Activity" />
+            android:name=".About"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
-            android:name="com.shanto.teachersdashboard.ClassDetail_Activity"
+            android:name=".Notification"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Reports_Detail_Activity"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".Reports_Activity" />
+        <activity
+            android:name=".ClassDetail_Activity"
             android:theme="@style/FullScreenTheme" />
         <activity
-            android:name="com.shanto.teachersdashboard.Insert_class_Activity"
+            android:name=".Insert_class_Activity"
             android:theme="@style/AppTheme2" />
-        <activity android:name="com.shanto.teachersdashboard.Attendance"/>
-        <activity android:name="com.shanto.teachersdashboard.MainActivity">
+        <activity android:name=".Attendance" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
