@@ -5,6 +5,9 @@ An Android app which uses Realm database to make attendance process simple insid
 
 This app simplifies the process of taking attendance in classroom. It has a very clean and elegant UI which is teacher-friendly. 
 
+[[Click here for Software Requirement Specification (SRS) document of this software]](https://github.com/shakib75bd/Software-Requirements-Specification-SRS-document-for-Teacher-s-Dashboard)
+
+
 ### How to install?
 Installing this app is very simple:
 * Open Android Studio
