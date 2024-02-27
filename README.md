@@ -1,4 +1,4 @@
-# Easy-Attendance-App
+# Teacher's Dashboard
 An Android app which uses Realm database to make attendance process simple inside classroom
 
 ### Introduction
